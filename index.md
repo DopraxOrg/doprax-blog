@@ -17,5 +17,5 @@ Happy building.
 
 ## Articles
 
-- [V2Ray/Xray Server Setup on Doprax ProVM](blog/v2ray-xray-2026-doprax.md)
-- [Coming soon](coming_soon.md)
+<!-- BLOG START -->
+<!-- BLOG END -->
