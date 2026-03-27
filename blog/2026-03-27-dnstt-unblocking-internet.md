@@ -28,3 +28,6 @@ The only “catch” is speed.
 Because it has to chop your data into tiny pieces to fit inside DNS packets, it’s much slower than a normal VPN.
 
 But when every other connection method is blocked, “slow” is infinitely better than “nothing.”
+
+# dnstt Repo
+There are several available repos on here. Here's one of them: https://github.com/bugfloyd/dnstt-deploy?tab=readme-ov-file
