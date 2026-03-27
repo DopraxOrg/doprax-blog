@@ -1,3 +1,8 @@
+---
+title: "How to Bypass Firewalls with DNS Tunneling (dnstt Tutorial)"
+excerpt: "When VPNs fail, DNS tunneling provides a resilient, encrypted escape hatch using dnstt and Doprax."
+---
+
 # What Is dnstt?
 
 While “admins” can block Youtube, social media, and VPN, there is a thing they won’t block: DNS traffic.
