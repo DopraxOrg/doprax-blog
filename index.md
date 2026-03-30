@@ -16,6 +16,7 @@ Happy building.
 ## Articles
 
 <!-- BLOG START -->
+- **2026-03-30** — [Install Amnezia Vpn](blog/2026-03-30-Install-Amnezia-VPN.md)
 - **2026-03-27** — [Dnstt Unblocking Internet](blog/2026-03-27-dnstt-unblocking-internet.md)
 - **2026-03-18** — [Doprax Yaml Guide](blog/2026-03-18-Doprax-YAML-Guide.md)
 - **2026-03-11** — [Test Post](blog/2026-03-11-test-post.md)
