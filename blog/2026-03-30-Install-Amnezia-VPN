@@ -1,0 +1,60 @@
+# How to Run AmneziaVPN on a Doprax VM: A Complete Guide
+
+Setting up a personal VPN can often feel like a deep dive into terminal commands and network configurations. However, by combining **Doprax’s** flexible cloud infrastructure with **AmneziaVPN’s** automated setup, you can deploy a highly obfuscated, self-hosted VPN in under five minutes.
+
+This setup is particularly effective for users in regions with strict internet censorship, as it uses advanced protocols designed to bypass Deep Packet Inspection (DPI).
+
+---
+
+## 1. Provision Your VM on Doprax
+The first step is to create the "engine" for your VPN. Doprax allows you to spin up virtual machines (VMs) with per-hour billing, which is ideal if you need to frequently change IP addresses.
+
+* **Create a VM:** Log into your Doprax dashboard and create a new instance.
+* **Select OS:** Choose a clean **Ubuntu 22.04** installation. 
+* **Requirements:** Ensure the VM has **KVM virtualization** enabled and at least **1GB of RAM**.
+* **Configuration:** Do not install any control panels (like cPanel or Plesk). Amnezia works best on a "blank slate."
+* **Get Credentials:** Once provisioned, Doprax will provide your **IP address**, **root login**, and **password**. Amnezia will use **Port 22** (SSH) to configure the server.
+
+---
+
+## 2. Connect via the Amnezia App
+Unlike traditional VPN setups, you don't need to touch a terminal or write a single line of code.
+
+1.  **Download:** Install the [AmneziaVPN client](https://amnezia.org/) on your desktop.
+2.  **Select Setup:** Open the app and select **"Self-hosted VPN."**
+3.  **Credentials:** Enter the IP, username (root), and password provided by Doprax.
+4.  **Deployment:** Choose between **"Automatic Setup"** (which defaults to AmneziaWG) or manual setup where you can pick a specific protocol.
+
+### Automated Deployment
+Once you hit connect, the Amnezia app SSHes into your Doprax VM and automatically deploys everything via **Docker containers**. It handles the server-side installation, security hardening, and protocol configuration without any manual intervention from you.
+
+---
+
+## 3. Why AmneziaWG?
+The star of this setup is **AmneziaWG**, a modified version of the popular WireGuard protocol. While standard WireGuard is fast, it has distinct "fingerprints" that make it easy for censors to block.
+
+* **Header Obfuscation:** It modifies the headers of all packets with randomized values.
+* **Packet Padding:** It appends random bytes to authentication packets to change their size.
+* **The Result:** These modifications make it virtually impossible for automated systems to devise a universal rule to detect and block the protocol.
+
+---
+
+## 4. Sharing Access via QR Codes
+One of the most powerful features of Amnezia is the ability to share your connection with others—ideal for the diaspora helping family members in censored regions.
+
+1.  **Click "Share":** Within the app, select the "Share" icon next to your server.
+2.  **Export:** Select the protocol and generate a **QR code** or a configuration file.
+3.  **Receive:** The recipient simply downloads the free Amnezia app and scans your code. 
+
+> **The Diaspora Use Case:** Someone in Berlin can manage the Doprax VM and simply send a QR code to family in Moscow. Recipients never need server access or technical knowledge.
+
+---
+
+## The "Burner" Strategy: Beating IP Blocks
+In the ongoing "arms race" of internet censorship, specific IP addresses are often blacklisted. 
+
+Because Doprax uses **per-hour billing**, you have a strategic advantage. If your VPN stops working because the IP is blocked, you can simply **destroy the VM** and spin up a new one. You’ll receive a fresh IP address in minutes and only pay for the few hours the previous VM was active.
+
+---
+
+**Would you like me to help you compare the different protocols available in Amnezia, such as OpenVPN over ShadowSocks versus AmneziaWG?**
