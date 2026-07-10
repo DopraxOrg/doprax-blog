@@ -30,7 +30,7 @@ import requests
 RETRYABLE_STATUS_CODES = {429, 500, 502, 503, 504}
 MAX_ATTEMPTS = 4
 MAX_STORIES = 8  # auto-picked stories per day, on top of any manually submitted topics
-GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-2.5-flash")
+GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-flash-latest")
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
 
 # Doprax-audience DevOps terms: self-hosting / PaaS / FinOps / self-hosted AI /
