@@ -1,0 +1,67 @@
+name: Daily DevOps news (EN + RU)
+
+# Single source of truth: this workflow lives in doprax-blog and pushes to BOTH
+# doprax-blog (this repo, via the default GITHUB_TOKEN) and doprax-blog-ru (cross-repo,
+# via the RU_REPO_TOKEN secret -- a PAT with contents:write on DopraxOrg/doprax-blog-ru).
+
+on:
+  schedule:
+    - cron: "0 8 * * *"   # daily 08:00 UTC
+  workflow_dispatch:
+    inputs:
+      manual_topics:
+        description: >-
+          Optional: force-include topics today, one per line as "Title | URL"
+          (URL optional). These are guaranteed to be picked, on top of the usual
+          RSS-curated stories.
+        required: false
+        default: ""
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout doprax-blog (EN)
+        uses: actions/checkout@v4
+        with:
+          path: doprax-blog
+
+      - name: Checkout doprax-blog-ru (RU)
+        uses: actions/checkout@v4
+        with:
+          repository: DopraxOrg/doprax-blog-ru
+          token: ${{ secrets.RU_REPO_TOKEN }}
+          path: doprax-blog-ru
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - run: pip install -r doprax-blog/requirements.txt
+
+      - name: Fetch and curate DevOps news (EN + RU)
+        working-directory: doprax-blog
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          RU_REPO_DIR: ../doprax-blog-ru
+          MANUAL_TOPICS: ${{ github.event.inputs.manual_topics }}
+        run: python fetch.py
+
+      - name: Commit and push EN changes
+        working-directory: doprax-blog
+        run: |
+          git config user.name "doprax-news-bot"
+          git config user.email "bot@doprax.com"
+          git add news/ README.md index.md docs/
+          git commit -m "Daily DevOps news update" || exit 0
+          git push
+
+      - name: Commit and push RU changes
+        working-directory: doprax-blog-ru
+        run: |
+          git config user.name "doprax-news-bot"
+          git config user.email "bot@doprax.com"
+          git add news/ README.md index.md docs/
+          git commit -m "Daily DevOps news update (RU)" || exit 0
+          git push
