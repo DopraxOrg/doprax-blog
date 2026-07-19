@@ -5,31 +5,27 @@ Recent articles:
 ## Daily DevOps News
 
 <!-- NEWS START -->
-### Latest — 2026-07-18
+### Latest — 2026-07-19
 
 - **Nginx 1.29.8 and FreeNginx Released With Critical Security Updates - CyberSecurityNews**
-  The release of Nginx 1.29.8 alongside FreeNginx security patches highlights the operational overhead of the ongoing project fork. Administrators running either branch need to apply these updates immediately to address critical vulnerabilities in request handling. For self-hosted setups, this reinforces the need for automated container image rebuilding pipelines to deploy core dependency patches without manual intervention.
+  The release of Nginx 1.29.8 alongside FreeNginx addresses several critical security vulnerabilities that could lead to unauthorized access or resource exhaustion. Operators running exposed proxy layers must prioritize patching to prevent potential exploits. This release highlights the ongoing maintenance split in the Nginx ecosystem, requiring administrators to track security patches across both forks.
   [Read more](https://news.google.com/rss/articles/CBMidEFVX3lxTE0tWVRPaG9lTlJMZFVyVGFNb2VKZ1g5WlAyQzlzMUVrWHZRSkRoSklKTzNSV184eWg5ZUNrS2wzX1VTVklacjJDZjZGSHY4NElReHhpcHI3WnI0VWNyUUZJb0ktY1V6c1NIS082SXVDMF9vUHFB0gF6QVVfeXFMTlpQZnZsRWlzLWJvSUFqUkY1a0RxMHlodFJXRzNGY2lZWnItMjFmU0hiNXN2MXplaTAtdlNSb0dZVWI2MHp6U1M2ZmVNeXptWlpsQTB5N09zaU12OGVnNTRFZ0diZ2w2cWl1UTU2YzlHY1BPTmxoLXpoc0E?oc=5)
 
 - **Hackers Exploit n8n Webhooks to Spread Malware - gbhackers.com**
-  Self-hosted automation platforms like n8n are prime targets when exposed directly to the public internet. This wave of webhook exploits emphasizes that simply running tools in Docker is not enough; proper ingress filtering, rate-limiting, and network segmentation are mandatory. Organizations must audit their active n8n workflows and restrict endpoint access to trusted source IPs only.
+  Attackers are actively targeting exposed n8n webhooks to execute malicious payloads and distribute malware. Because self-hosted automation tools hold highly privileged API keys, insecure endpoints present an immediate threat to internal networks. Security teams should enforce strict IP whitelisting and header verification for all active webhooks.
   [Read more](https://news.google.com/rss/articles/CBMiVEFVX3lxTFBpM1pWZHdoWjA5Q090bWpzQURXSmR2NVZXVzNsNTdacnpxeTlRWTVBVEx2STdBcFVmWjhZZGNNUUJxcDJpRjU4QkNKUExIcVB4am93Tg?oc=5)
 
-- **macOS 26: Native container support delights developers – and not just them - heise online**
-  Native container support in macOS marks a significant shift for local development environments, which have historically relied on heavy Linux virtual machines. Removing the virtualization layer directly improves file-system performance, CPU overhead, and battery life during local Docker runs. For platform teams, this could simplify developer machine provisioning and standardize local-to-production parity.
-  [Read more](https://news.google.com/rss/articles/CBMitAFBVV95cUxQZlM4SDNiNGVTM05pWE1QSFE0Q1BrZENVMlNJMVdPVjNxVkstZHBBQ19GZHN5VzByMUdfOGJOeG5OWUN4dW95dWo2ZTBFaGpUbjZ4dHpLQ3J5OXVZb3lON1ZSMUF4cHFTZWFlMVgwNnl2TGtIdXE0eHA4WWNOdUViTmZxR08zejRVYUw4M3BBMXc5UlhMdk82MHRrSFVQTnhuUE1HcEdyUHJVWHlVaWFFXzh4anc?oc=5)
+- **GitLab thrice sued for 'misleading' investors with AI hype - The Register**
+  The investor lawsuits alleging that GitLab overstated its near-term AI monetization capabilities underscore a broader industry correction around developer tools. Organizations evaluating AI-assisted CI/CD platforms should focus on verified internal performance metrics rather than vendor projections. The outcome of these cases may force more transparency regarding what developer-oriented AI tools can actually deliver.
+  [Read more](https://news.google.com/rss/articles/CBMisgFBVV95cUxONTBSSzB1MV9FUU9wX1ZBT2xFdVZCN0kwUWVGbVlSUmdaN1JMTUJpcjU5QmpEZW93V21CVkN0NHd2S3ZBbTZCNEpzYndyT0ZiQi1zMWRuUllNbFVvVVFXY05Da3I5R2pyRS0xUEFINS1obzkwei1SSnB4ZDZrbU9pc0VMeGNpNVk2d09GQm9lTUluRFd0SjRJVnVwQmt6TWhlY0w5UGVCRmV2Q2JMdlkwN1J3?oc=5)
 
 - **Enhancing Developer Productivity: Finch’s Support for Development Containers and the Finch Daemon - Amazon Web Services (AWS)**
-  AWS Finch is maturing into a highly viable open-source alternative to Docker Desktop with its new daemon and Dev Container support. By decoupling from proprietary desktop licensing and integrating closer with open container standards, it offers enterprise teams a way to bypass license compliance overhead. For infrastructure engineers, it provides a lightweight, command-line first toolchain for local container management.
+  The addition of development container support and a persistent daemon to AWS Finch strengthens its position as a drop-in replacement for Docker Desktop. For enterprise teams looking to reduce licensing costs on macOS and Windows, Finch provides a robust open-source alternative. This update bridges the gap in developer experience for workflows that depend heavily on Dev Containers.
   [Read more](https://news.google.com/rss/articles/CBMi0gFBVV95cUxNUEJ4S280bmpMT3M1SElkU2w3MVZpU25zTE1TNXRYNHVBVHY3UUtKYWJyTjF4cGhYUzFqSWQxcGFscEZsOXRVaEVRak5wYWpCR0NBNHNaaWZ1aGNrVVhDX0JpVE5hQ1NtWTRuN0s3dmp2ZXF2MkdjZXFPeFVEbFNPU2pnRnRsdWRDUzVJMGdsMEExMGc2blZsUm4xd3o4S0wzb0ZRXzI2WFpsWVhqb25MRGVHWkE2UnZfdUdPRVh2V21VeTM2Qmthd2UwLVJJLVdCZFE?oc=5)
 
-- **9 Open-Source AI Coding Agents Worth Self-Hosting - Security Boulevard**
-  Running open-source AI coding agents locally or on private VPS instances provides a secure alternative to sending intellectual property to third-party APIs. However, self-hosting these tools requires careful resource planning, as real-time code generation demands dedicated GPU compute or optimized quantization. SREs must balance the cost of private infrastructure against the latency and compliance benefits of on-premise execution.
-  [Read more](https://news.google.com/rss/articles/CBMikgFBVV95cUxOM21faE9ldDU0Y0pOdjlmWGtMR19RWUFBSzk0bHNNWVg1TWl0aTJqYTdRUXJFaUZmVHg3RlFxVnA5QUZHUnY1Uk5NdnpkTE0xc2poNUp2ZlFVeV9RN1lTUFBsSUpncUFqeHJVSkZNb2pDV05LN0FFS21MU05LSkROZWl2R0lmWWFiSXdnVi1EMzRWZw?oc=5)
-
-- **GitLab thrice sued for 'misleading' investors with AI hype - The Register**
-  The shareholder lawsuits against GitLab over exaggerated AI capabilities reflect a growing skepticism toward vendor feature inflation. DevOps buyers are increasingly prioritizing core platform stability, fast CI/CD runner execution, and predictable pricing over shoehorned generative features. This pushback suggests that infrastructure teams should continue evaluating toolchains based on fundamental performance metrics rather than marketing roadmaps.
-  [Read more](https://news.google.com/rss/articles/CBMisgFBVV95cUxONTBSSzB1MV9FUU9wX1ZBT2xFdVZCN0kwUWVGbVlSUmdaN1JMTUJpcjU5QmpEZW93V21CVkN0NHd2S3ZBbTZCNEpzYndyT0ZiQi1zMWRuUllNbFVvVVFXY05Da3I5R2pyRS0xUEFINS1obzkwei1SSnB4ZDZrbU9pc0VMeGNpNVk2d09GQm9lTUluRFd0SjRJVnVwQmt6TWhlY0w5UGVCRmV2Q2JMdlkwN1J3?oc=5)
+- **Your Mac is mistakenly flagging Docker as malware - Cult of Mac**
+  A recent macOS update mistakenly flagged Docker binaries as malware, causing sudden disruptions to local development environments. While workarounds exist, such incidents point to the vulnerability of developer workflows that rely heavily on host OS security policies. Platform engineers should document clear fallback plans for code-signing errors to minimize downtime during similar OS-level updates.
+  [Read more](https://news.google.com/rss/articles/CBMiigFBVV95cUxNUzRlWUNlWVhjZU8wNHNNMllzZDhqN2FyTWZ4UjhlRHlETzFnbGQ1dXpnVFZldnVtbmQ3Ri1GRzJkY3NzN2NSb1JfUGNfcXB4TU40X25YTWhJYzlWMm1fa0JPSHphSXVNNFRRbzAyNGczMmlzQ29zZTdlU0FHV1VvdmlVbzYyR2YtalE?oc=5)
 
 ## Archive
 
