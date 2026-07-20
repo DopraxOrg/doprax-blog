@@ -340,6 +340,28 @@
           "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNUzRlWUNlWVhjZU8wNHNNMllzZDhqN2FyTWZ4UjhlRHlETzFnbGQ1dXpnVFZldnVtbmQ3Ri1GRzJkY3NzN2NSb1JfUGNfcXB4TU40X25YTWhJYzlWMm1fa0JPSHphSXVNNFRRbzAyNGczMmlzQ29zZTdlU0FHV1VvdmlVbzYyR2YtalE?oc=5",
           "commentary": "A recent macOS update mistakenly flagged Docker binaries as malware, causing sudden disruptions to local development environments. While workarounds exist, such incidents point to the vulnerability of developer workflows that rely heavily on host OS security policies. Platform engineers should document clear fallback plans for code-signing errors to minimize downtime during similar OS-level updates."
         }
+      ],
+      "2026-07-20": [
+        {
+          "title": "Nginx 1.29.8 and FreeNginx Released With Critical Security Updates - CyberSecurityNews",
+          "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE0tWVRPaG9lTlJMZFVyVGFNb2VKZ1g5WlAyQzlzMUVrWHZRSkRoSklKTzNSV184eWg5ZUNrS2wzX1VTVklacjJDZjZGSHY4NElReHhpcHI3WnI0VWNyUUZJb0ktY1V6c1NIS082SXVDMF9vUHFB0gF6QVVfeXFMTlpQZnZsRWlzLWJvSUFqUkY1a0RxMHlodFJXRzNGY2lZWnItMjFmU0hiNXN2MXplaTAtdlNSb0dZVWI2MHp6U1M2ZmVNeXptWlpsQTB5N09zaU12OGVnNTRFZ0diZ2w2cWl1UTU2YzlHY1BPTmxoLXpoc0E?oc=5",
+          "commentary": "The concurrent security releases of Nginx 1.29.8 and FreeNginx address vulnerabilities that could compromise edge routing. For teams self-hosting infrastructure, keeping reverse proxies updated is a priority to prevent request smuggling or resource exhaustion. Admins should review changes and schedule updates, especially if using HTTP/2 or advanced stream configurations."
+        },
+        {
+          "title": "GitLab thrice sued for 'misleading' investors with AI hype - The Register",
+          "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxONTBSSzB1MV9FUU9wX1ZBT2xFdVZCN0kwUWVGbVlSUmdaN1JMTUJpcjU5QmpEZW93V21CVkN0NHd2S3ZBbTZCNEpzYndyT0ZiQi1zMWRuUllNbFVvVVFXY05Da3I5R2pyRS0xUEFINS1obzkwei1SSnB4ZDZrbU9pc0VMeGNpNVk2d09GQm9lTUluRFd0SjRJVnVwQmt6TWhlY0w5UGVCRmV2Q2JMdlkwN1J3?oc=5",
+          "commentary": "The lawsuits targeting GitLab over allegedly inflated AI capabilities highlight a growing gap between vendor marketing and actual enterprise value in DevOps toolchains. For platform engineering teams, this is a reminder to evaluate AI-assisted development tools based on concrete performance metrics rather than vendor roadmap promises. Relying on unproven features for capacity planning remains a major risk."
+        },
+        {
+          "title": "Hackers Exploit n8n Webhooks to Spread Malware - gbhackers.com",
+          "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBpM1pWZHdoWjA5Q090bWpzQURXSmR2NVZXVzNsNTdacnpxeTlRWTVBVEx2STdBcFVmWjhZZGNNUUJxcDJpRjU4QkNKUExIcVB4am93Tg?oc=5",
+          "commentary": "Exploitations of n8n webhooks to distribute malware emphasize the security risks of exposing self-hosted automation tools to the public internet without strict access controls. DevOps engineers running these instances must enforce rate limiting, validate incoming payloads, and isolate workflow runners. Restricting webhook endpoints to trusted IP ranges is a necessary step to secure self-hosted environments."
+        },
+        {
+          "title": "Enhancing Developer Productivity: Finch’s Support for Development Containers and the Finch Daemon - Amazon Web Services (AWS)",
+          "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNUEJ4S280bmpMT3M1SElkU2w3MVZpU25zTE1TNXRYNHVBVHY3UUtKYWJyTjF4cGhYUzFqSWQxcGFscEZsOXRVaEVRak5wYWpCR0NBNHNaaWZ1aGNrVVhDX0JpVE5hQ1NtWTRuN0s3dmp2ZXF2MkdjZXFPeFVEbFNPU2pnRnRsdWRDUzVJMGdsMEExMGc2blZsUm4xd3o4S0wzb0ZRXzI2WFpsWVhqb25MRGVHWkE2UnZfdUdPRVh2V21VeTM2Qmthd2UwLVJJLVdCZFE?oc=5",
+          "commentary": "AWS is expanding its open-source container client Finch with native daemon support and development container integration, positioning it as a stronger direct alternative to Docker Desktop. For teams developing on macOS or Windows, this reduces reliance on proprietary licensing while maintaining compatibility with standard Docker Compose workflows. The addition of a persistent daemon simplifies local CI/CD testing and container lifecycle management."
+        }
       ]
     }
   }
