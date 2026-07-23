@@ -421,7 +421,8 @@
           "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQSUNOMVNIS1l0Tnl0VHN2RmdjWnpfU25sVTN6WTMyODZTQWJ0NzdEaENsc09HVHRHTDRFMjR2UGRpbEp1ZElBUG5LTVNWd3UyTHZoa0c2YWRlQzh0Vm8wT3FNS1h4VmRVa2JaZktZczNzMVRXQS1ObHM5LUVLcG1TMFpEQzF1SzFhOUVmNjBtWTlwVlNOeS04?oc=5",
           "commentary": "Moro Hub and Rafay are deploying a dedicated GPU Platform-as-a-Service infrastructure in Dubai to support regional AI workloads. Providing managed Kubernetes and GPU cluster orchestration simplifies hardware provisioning and lifecycle management for teams training or serving large models locally. The shift toward regional GPU PaaS reflects increasing demand for data sovereignty combined with cloud-native infrastructure automation."
         }
-      ]
+      ],
+      "2026-07-23": []
     }
   }
 }
