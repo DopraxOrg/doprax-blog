@@ -5,31 +5,35 @@ Recent articles:
 ## Daily DevOps News
 
 <!-- NEWS START -->
-### Latest — 2026-07-25
+### Latest — 2026-07-26
+
+- **NanoClaw integrates with Docker to bring trust to AI agents - Techzine Global**
+  Running autonomous AI agents locally presents major security risks if their file system and network access are not strictly isolated. NanoClaw's integration with Docker provides ephemeral sandboxing and explicit runtime permissions for agent execution. This prevents rogue or prompt-injected LLM outputs from compromising the host infrastructure.
+  [Read more](https://news.google.com/rss/articles/CBMipgFBVV95cUxOaEg1RGJrZWtiTVlSbk5JZnlRd2xVV2tEVjBHODI1cW1SQUFDdFVzSE5VQUkxcE55OGFqTEZNM3VXUFRHRFg3VzVXWUk2MWlaRjhDaERUamVYclhyTVdPSVJKeF9Cb2FFcG95dnlyeUhNSU9OV1RNZ19CbGpkUVdpMGxLOTZfT0FudXplbU9PVGJLUUgwbjNjYXhMTl93YTlqc21DRTd3?oc=5)
 
 - **Nginx 1.29.8 and FreeNginx Released With Critical Security Updates - CyberSecurityNews**
-  Security releases across both Nginx branches fix critical memory exposure vulnerabilities during HTTP/2 parsing. Operations teams running public ingress proxies should prioritize patching, as these flaws can be triggered by unauthenticated clients before request processing finishes. Teams unable to upgrade immediately should evaluate temporarily disabling HTTP/2 on exposed edge nodes.
+  Both mainline Nginx and FreeNginx shipped emergency security updates addressing critical vulnerabilities in HTTP handling and memory management. Operators running reverse proxies or edge nodes should prioritize updating these binaries immediately to prevent potential remote code execution or denial of service attacks. Maintaining automated patch pipelines for web servers remains essential for edge security.
   [Read more](https://news.google.com/rss/articles/CBMidEFVX3lxTE0tWVRPaG9lTlJMZFVyVGFNb2VKZ1g5WlAyQzlzMUVrWHZRSkRoSklKTzNSV184eWg5ZUNrS2wzX1VTVklacjJDZjZGSHY4NElReHhpcHI3WnI0VWNyUUZJb0ktY1V6c1NIS082SXVDMF9vUHFB0gF6QVVfeXFMTlpQZnZsRWlzLWJvSUFqUkY1a0RxMHlodFJXRzNGY2lZWnItMjFmU0hiNXN2MXplaTAtdlNSb0dZVWI2MHp6U1M2ZmVNeXptWlpsQTB5N09zaU12OGVnNTRFZ0diZ2w2cWl1UTU2YzlHY1BPTmxoLXpoc0E?oc=5)
 
+- **ADK for Java opening up to third-party language models via LangChain4j integration - blog.google**
+  Google is decoupling its Java Agent Development Kit from proprietary Gemini endpoints by adding LangChain4j support. This allows Java backend developers to swap out model providers or target local inference engines without rewriting core application logic. Reducing vendor lock-in at the framework layer makes enterprise AI integration significantly more resilient.
+  [Read more](https://news.google.com/rss/articles/CBMiuAFBVV95cUxQSEtEVXNEMFpseHhmNzV1X3NjemZkcHBTd183YS1aV1VWMXJYZXJwaWVIT1VxMHZ4Mmp2YllWOTQweDFqb0t0ZlV1aHV0ZVhKUmp4RjN4ZGtfMU1tRG4zZ0trTENEM3lWNWJoZkc2TTIxLVE0Ri16X055X3lZWHdzSGR5RnJ3ODg0N05zN2VyRGl1bmJ5RVlpdlRnZURtOUVjZkVnaDZkLWdqa1ZJenZYbUxWZ2oyeEQ3?oc=5)
+
+- **Moro Hub and Rafay team up for GPU PaaS in Dubai - Data Center Dynamics**
+  Cloud service providers are increasingly turning to Kubernetes-based orchestration platforms like Rafay to manage high-density GPU clusters for regional AI workloads. Provisioning infrastructure as a specialized PaaS reduces the operational complexity of managing bare-metal GPU nodes, multi-tenant scheduling, and driver lifecycle management. It highlights how infrastructure orchestration is shifting to treat accelerators as first-class scheduling entities.
+  [Read more](https://news.google.com/rss/articles/CBMilwFBVV95cUxQSUNOMVNIS1l0Tnl0VHN2RmdjWnpfU25sVTN6WTMyODZTQWJ0NzdEaENsc09HVHRHTDRFMjR2UGRpbEp1ZElBUG5LTVNWd3UyTHZoa0c2YWRlQzh0Vm8wT3FNS1h4VmRVa2JaZktZczNzMVRXQS1ObHM5LUVLcG1TMFpEQzF1SzFhOUVmNjBtWTlwVlNOeS04?oc=5)
+
 - **Hackers Exploit n8n Webhooks to Spread Malware - gbhackers.com**
-  Threat actors are targeting unauthenticated n8n webhook endpoints to execute arbitrary commands inside workflow execution environments. For teams running self-hosted n8n instances on internal or staging networks, exposing webhooks to the public internet without proper secret headers or API gateways creates an easy initial access vector. Production setups must isolate execution environments using container boundaries and strictly filter incoming webhook sources.
+  Unauthenticated webhooks in self-hosted n8n instances are being actively targeted to execute arbitrary commands and deliver malware payloads. Securing self-hosted automation engines requires enforcing authentication at the ingress layer or placing webhook endpoints behind strict API gateways rather than exposing them directly to the public internet. Convenience in workflow automation should never compromise perimeter defense.
   [Read more](https://news.google.com/rss/articles/CBMiVEFVX3lxTFBpM1pWZHdoWjA5Q090bWpzQURXSmR2NVZXVzNsNTdacnpxeTlRWTVBVEx2STdBcFVmWjhZZGNNUUJxcDJpRjU4QkNKUExIcVB4am93Tg?oc=5)
 
 - **Enhancing Developer Productivity: Finch’s Support for Development Containers and the Finch Daemon - Amazon Web Services (AWS)**
-  AWS is broadening Finch's capabilities by adding a background daemon and native Dev Container spec support. This turns the open-source CLI into a viable drop-in replacement for Docker Desktop on macOS and Linux without requiring proprietary desktop extensions. Organizations looking to eliminate Docker Desktop licensing costs while preserving developer workflows now have a more mature container engine option.
+  AWS is expanding Finch beyond a simple CLI tool into a background daemon supporting Dev Containers specifications directly. This gives macOS and Linux teams a native open-source alternative to Docker Desktop for local container orchestration without licensing lock-in or resource overhead. Standardization around Dev Containers makes local development environments more portable across disparate toolchains.
   [Read more](https://news.google.com/rss/articles/CBMi0gFBVV95cUxNUEJ4S280bmpMT3M1SElkU2w3MVZpU25zTE1TNXRYNHVBVHY3UUtKYWJyTjF4cGhYUzFqSWQxcGFscEZsOXRVaEVRak5wYWpCR0NBNHNaaWZ1aGNrVVhDX0JpVE5hQ1NtWTRuN0s3dmp2ZXF2MkdjZXFPeFVEbFNPU2pnRnRsdWRDUzVJMGdsMEExMGc2blZsUm4xd3o4S0wzb0ZRXzI2WFpsWVhqb25MRGVHWkE2UnZfdUdPRVh2V21VeTM2Qmthd2UwLVJJLVdCZFE?oc=5)
 
 - **GitLab thrice sued for 'misleading' investors with AI hype - The Register**
-  Class-action lawsuits claim GitLab exaggerated the revenue impact and adoption speed of its AI-driven features to investors. For engineering leaders, this highlights the growing gap between vendor AI marketing and actual enterprise ROI in CI/CD platforms. Evaluating DevOps tooling requires focusing on baseline pipeline performance and core developer velocity rather than high-margin generative AI add-ons.
+  Class-action lawsuits against GitLab highlight the growing operational friction between aggressive AI feature marketing and actual enterprise adoption metrics. Platforms pushing generative AI capabilities into dev pipelines face increasing scrutiny when those features fail to deliver measurable productivity gains or revenue growth. Infrastructure leaders are demanding proven ROI over experimental AI add-ons.
   [Read more](https://news.google.com/rss/articles/CBMisgFBVV95cUxONTBSSzB1MV9FUU9wX1ZBT2xFdVZCN0kwUWVGbVlSUmdaN1JMTUJpcjU5QmpEZW93V21CVkN0NHd2S3ZBbTZCNEpzYndyT0ZiQi1zMWRuUllNbFVvVVFXY05Da3I5R2pyRS0xUEFINS1obzkwei1SSnB4ZDZrbU9pc0VMeGNpNVk2d09GQm9lTUluRFd0SjRJVnVwQmt6TWhlY0w5UGVCRmV2Q2JMdlkwN1J3?oc=5)
-
-- **NanoClaw integrates with Docker to bring trust to AI agents - Techzine Global**
-  NanoClaw's integration with Docker uses isolated container namespaces to confine autonomous AI agent actions. Allowing AI agents to execute code or make system calls locally poses severe security risks if the model hallucinates or processes malicious prompt injections. Containerized isolation ensures agent execution stays bounded to disposable, low-privilege environments.
-  [Read more](https://news.google.com/rss/articles/CBMipgFBVV95cUxOaEg1RGJrZWtiTVlSbk5JZnlRd2xVV2tEVjBHODI1cW1SQUFDdFVzSE5VQUkxcE55OGFqTEZNM3VXUFRHRFg3VzVXWUk2MWlaRjhDaERUamVYclhyTVdPSVJKeF9Cb2FFcG95dnlyeUhNSU9OV1RNZ19CbGpkUVdpMGxLOTZfT0FudXplbU9PVGJLUUgwbjNjYXhMTl93YTlqc21DRTd3?oc=5)
-
-- **Moro Hub and Rafay team up for GPU PaaS in Dubai - Data Center Dynamics**
-  Moro Hub and Rafay are deploying a managed GPU platform in Dubai to provide localized AI computing capacity for regional enterprise workloads. Managing enterprise GPU clusters requires complex scheduling, dynamic partitioning, and strict data residency compliance that standard cloud providers struggle to offer in smaller jurisdictions. Localized GPU PaaS options provide an alternative for infrastructure teams bound by sovereignty laws.
-  [Read more](https://news.google.com/rss/articles/CBMilwFBVV95cUxQSUNOMVNIS1l0Tnl0VHN2RmdjWnpfU25sVTN6WTMyODZTQWJ0NzdEaENsc09HVHRHTDRFMjR2UGRpbEp1ZElBUG5LTVNWd3UyTHZoa0c2YWRlQzh0Vm8wT3FNS1h4VmRVa2JaZktZczNzMVRXQS1ObHM5LUVLcG1TMFpEQzF1SzFhOUVmNjBtWTlwVlNOeS04?oc=5)
 
 ## Archive
 
