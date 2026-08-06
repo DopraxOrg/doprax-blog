@@ -18,31 +18,35 @@ Happy building.
 ## Daily DevOps News
 
 <!-- NEWS START -->
-### Latest — 2026-08-05
+### Latest — 2026-08-06
 
-- **n8n Sandbox Escape Lets Workflow Editors Run OS Commands as the n8n Process - thehackernews.com**
-  The sandbox escape vulnerability in n8n highlights the inherent risk of running low-code automation tools that execute dynamic JavaScript in self-hosted environments. If you expose workflow editing capabilities or external webhooks without strict network segregation, an attacker can pivot from the application layer to full execution inside the host container. Isolating the worker process with minimal OS privileges and enforcing egress firewalls remains non-negotiable for self-hosted instances.
+- **n8n Sandbox Escape Lets Workflow Editors Run OS Commands as the n8n Process - The Hacker News**
+  The n8n sandbox escape vulnerability highlights the risk of treating workflow automation tools as low-risk internal services. Running untrusted code or allowing custom JS execution inside self-hosted automation engines requires process isolation beyond default application boundaries. If you expose n8n webhooks or grant user access, run the container in an isolated network segment with minimal host capabilities.
   [Read more](https://news.google.com/rss/articles/CBMie0FVX3lxTE80cFJDS2J5QjZkQ2lDTm56U3pxZE5vWm56NDRzZGxxelJFanhibDR6WVhub1RIdTR0RUl3cXo3bkdvQ19GekhQNmI2cUQtSUhSWjVsbFJBMEJidXRoZEI5RUZwSVdmaHBXZm00dGRUa2lPY0oySWtoUXhvbw?oc=5)
 
-- **Nginx 1.29.8 and FreeNginx Released With Critical Security Updates - CyberSecurityNews**
-  Simultaneous security updates across Nginx mainline and FreeNginx highlight critical memory or parsing fixes that require prompt patching for edge proxies. Because reverse proxies sit directly on the ingress path, delaying updates exposes internal application clusters to potential request smuggling or denial-of-service vectors. Teams operating custom builds or container base images should bump their toolchains immediately to pull in the upstream security fixes.
-  [Read more](https://news.google.com/rss/articles/CBMidEFVX3lxTE0tWVRPaG9lTlJMZFVyVGFNb2VKZ1g5WlAyQzlzMUVrWHZRSkRoSklKTzNSV184eWg5ZUNrS2wzX1VTVklacjJDZjZGSHY4NElReHhpcHI3WnI0VWNyUUZJb0ktY1V6c1NIS082SXVDMF9vUHFB0gF6QVVfeXFMTlpQZnZsRWlzLWJvSUFqUkY1a0RxMHlodFJXRzNGY2lZWnItMjFmU0hiNXN2MXplaTAtdlNSb0dZVWI2MHp6U1M2ZmVNeXptWlpsQTB5N09zaU12OGVnNTRFZ0diZ2w2cWl1UTU2YzlHY1BPTmxoLXpoc0E?oc=5)
+- **F5 releases out-of-band security updates for NGINX and BIG-IP products - Field Effect**
+  Emergency out-of-band updates from F5 and NGINX signal high-severity vulnerabilities affecting critical edge infrastructure. Prompt patch deployment is vital here, as reverse proxies and API gateways are prime targets for initial access exploitation. Teams should verify upstream configs, test patches in staging, and enforce automated patch delivery pipelines for load balancers.
+  [Read more](https://news.google.com/rss/articles/CBMiYkFVX3lxTE5JMkc1bEZSMVNyVkp2djRjazNOSVU2NnQ1V0Q2QlNKTXVnWS1aWW9qN1lWWm9JV2ctMEJvSzFhbmpZZFhWbW5DT2pqU0dQN09IYlB6ekplTGk1MmpWdy1QaHFn?oc=5)
+
+- **NanoClaw integrates with Docker to bring trust to AI agents - Techzine Global**
+  NanoClaw's integration with Docker reflects a growing operational need to constrain autonomous AI agents within strict container runtimes. Giving agents unrestricted host or API access creates massive security blind spots during execution. Enforcing ephemerality, explicit resource limits, and network egress policies around agent containers is becoming standard practice for safe deployment.
+  [Read more](https://news.google.com/rss/articles/CBMipgFBVV95cUxOaEg1RGJrZWtiTVlSbk5JZnlRd2xVV2tEVjBHODI1cW1SQUFDdFVzSE5VQUkxcE55OGFqTEZNM3VXUFRHRFg3VzVXWUk2MWlaRjhDaERUamVYclhyTVdPSVJKeF9Cb2FFcG95dnlyeUhNSU9OV1RNZ19CbGpkUVdpMGxLOTZfT0FudXplbU9PVGJLUUgwbjNjYXhMTl93YTlqc21DRTd3?oc=5)
+
+- **Hosting Ars, part three: CI/CD, or how I learned to stop worrying and love DevOps - Ars Technica**
+  Ars Technica's breakdown of their infrastructure migration demonstrates the practical realities of transitioning legacy publishing setups to modern CI/CD pipelines. Moving away from manual deployments reduces drift, but introduces new maintenance overhead around pipeline configuration and state management. The key takeaway for sysadmins is that pipeline simplicity and reproducible staging environments matter far more than adopting complex orchestration tools.
+  [Read more](https://news.google.com/rss/articles/CBMieEFVX3lxTE1Vc05FbjFSdzBrSEV4aXNFc01FSlV6UlJaa3p6RFVRYzl4aV95dHJBaExZekpqY0dGTTVSc25WYkVPWHZqNnl6dUNwUU9YbkJlYU5mbHVCLXNEV0Q4dTdXdzVOMVMtNnNMb3ZlU0R3bm1QMmo5SjhybA?oc=5)
 
 - **Enhancing Developer Productivity: Finch’s Support for Development Containers and the Finch Daemon - Amazon Web Services (AWS)**
-  AWS Finch integration of dev containers and a persistent background daemon makes it a viable open-source alternative to Docker Desktop on macOS and Linux. Standardizing containerized development environments directly inside the CLI tool reduces friction for platform teams maintaining cloud-native inner loops. It also signals growing industry alignment around open container specs over proprietary desktop tools.
+  AWS continues to position Finch as an open-source alternative to Docker Desktop by adding support for devcontainers and a background daemon. Native devcontainer execution lowers friction for developer onboarding while keeping container toolchains standardized. For platform teams managing macOS developer fleets, Finch provides a controllable runtime without proprietary licensing constraints.
   [Read more](https://news.google.com/rss/articles/CBMi0gFBVV95cUxNUEJ4S280bmpMT3M1SElkU2w3MVZpU25zTE1TNXRYNHVBVHY3UUtKYWJyTjF4cGhYUzFqSWQxcGFscEZsOXRVaEVRak5wYWpCR0NBNHNaaWZ1aGNrVVhDX0JpVE5hQ1NtWTRuN0s3dmp2ZXF2MkdjZXFPeFVEbFNPU2pnRnRsdWRDUzVJMGdsMEExMGc2blZsUm4xd3o4S0wzb0ZRXzI2WFpsWVhqb25MRGVHWkE2UnZfdUdPRVh2V21VeTM2Qmthd2UwLVJJLVdCZFE?oc=5)
 
+- **GitLab thrice sued for 'misleading' investors with AI hype - The Register**
+  Lawsuits against GitLab over overstated AI capabilities underline the growing gap between vendor marketing and actual operational utility. Enterprise teams often pay premium tiers for generative features that deliver marginal productivity gains while increasing code governance complexity. Infrastructure and platform leads should evaluate AI add-ons strictly on measurable developer throughput and security compliance rather than vendor roadmaps.
+  [Read more](https://news.google.com/rss/articles/CBMisgFBVV95cUxONTBSSzB1MV9FUU9wX1ZBT2xFdVZCN0kwUWVGbVlSUmdaN1JMTUJpcjU5QmpEZW93V21CVkN0NHd2S3ZBbTZCNEpzYndyT0ZiQi1zMWRuUllNbFVvVVFXY05Da3I5R2pyRS0xUEFINS1obzkwei1SSnB4ZDZrbU9pc0VMeGNpNVk2d09GQm9lTUluRFd0SjRJVnVwQmt6TWhlY0w5UGVCRmV2Q2JMdlkwN1J3?oc=5)
+
 - **macOS 26: Native container support delights developers – and not just them - heise online**
-  Native container support in macOS removes the heavy virtualization overhead traditionally required by tools like Docker Desktop or Lima. Running containers directly on host OS primitives improves I/O performance and battery life for developers on Apple Silicon hardware. For platform engineers, this significantly narrows the performance gap between local development setups and Linux production environments.
+  Native container engine support in macOS 26 eliminates the need for resource-heavy Linux virtual machines just to run container runtimes locally. Eliminating the translation virtualization layer significantly reduces idle CPU and memory consumption on developer laptops. This structural change brings Linux-like container performance to Mac workstations, simplifying local staging setup for microservices.
   [Read more](https://news.google.com/rss/articles/CBMitAFBVV95cUxQZlM4SDNiNGVTM05pWE1QSFE0Q1BrZENVMlNJMVdPVjNxVkstZHBBQ19GZHN5VzByMUdfOGJOeG5OWUN4dW95dWo2ZTBFaGpUbjZ4dHpLQ3J5OXVZb3lON1ZSMUF4cHFTZWFlMVgwNnl2TGtIdXE0eHA4WWNOdUViTmZxR08zejRVYUw4M3BBMXc5UlhMdk82MHRrSFVQTnhuUE1HcEdyUHJVWHlVaWFFXzh4anc?oc=5)
-
-- **Coolify - The self-hosted PaaS that saves you from Docker headaches - korben.info**
-  Coolify addresses the operational complexity of managing bare Docker Swarm or raw Compose files across multiple VPS instances. By providing a streamlined control plane for deployment, environment variables, and ingress SSL, it fills the gap between raw infrastructure and heavy cloud PaaS offerings. However, production readiness still depends on how well teams handle underlying host backups and stateful volume persistence.
-  [Read more](https://news.google.com/rss/articles/CBMie0FVX3lxTE95UllVb2J5bnB6V1lIUUxrbXd4aHg5T3ZLeE81TTBPT0dyc3gwemliQXlOeXpPUlp4THpSaHFxVndLd21XWEJFZlhUZ2l4U2pTZEpyMWNRTHQ4OG5LeTlObjRQRkJINTZ3YWc4Q1g0N1BQNU5QSlMtdDN2OA?oc=5)
-
-- **Moro Hub and Rafay team up for GPU PaaS in Dubai - datacenterdynamics.com**
-  Managed GPU PaaS deployments reflect a shifting requirement in cloud infrastructure toward automated orchestration for AI workloads. By leveraging Rafay automation, regional providers can deliver GPU capacity without forcing engineering teams to manage complex CUDA driver configurations or compute node scaling. This approach helps control infrastructure spend while enforcing standardized access controls for heavy training jobs.
-  [Read more](https://news.google.com/rss/articles/CBMilwFBVV95cUxQSUNOMVNIS1l0Tnl0VHN2RmdjWnpfU25sVTN6WTMyODZTQWJ0NzdEaENsc09HVHRHTDRFMjR2UGRpbEp1ZElBUG5LTVNWd3UyTHZoa0c2YWRlQzh0Vm8wT3FNS1h4VmRVa2JaZktZczNzMVRXQS1ObHM5LUVLcG1TMFpEQzF1SzFhOUVmNjBtWTlwVlNOeS04?oc=5)
 
 ## Archive
 
