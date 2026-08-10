@@ -5,31 +5,31 @@ Recent articles:
 ## Daily DevOps News
 
 <!-- NEWS START -->
-### Latest — 2026-08-09
+### Latest — 2026-08-10
 
 - **n8n Sandbox Escape Lets Workflow Editors Run OS Commands as the n8n Process - The Hacker News**
-  Workflow automation tools like n8n sit on sensitive API keys and internal network access, making them prime targets. A sandbox escape allowing host-level command execution gives attackers immediate access to underlying host resources and connected infrastructure services.
+  Workflow automation tool n8n faces critical security issues where workflow editors can escape the sandbox to execute arbitrary OS commands as the primary process. Additionally, exposed webhooks are being actively targeted in automated campaign attacks to host and execute malware. Engineering teams self-hosting n8n should immediately enforce strict authentication, restrict process permissions via container isolation, and audit public webhook endpoints.
   [Read more](https://news.google.com/rss/articles/CBMie0FVX3lxTE80cFJDS2J5QjZkQ2lDTm56U3pxZE5vWm56NDRzZGxxelJFanhibDR6WVhub1RIdTR0RUl3cXo3bkdvQ19GekhQNmI2cUQtSUhSWjVsbFJBMEJidXRoZEI5RUZwSVdmaHBXZm00dGRUa2lPY0oySWtoUXhvbw?oc=5)
 
-- **F5 releases out-of-band security updates for NGINX and BIG-IP products - Field Effect**
-  Out-of-band security releases for NGINX and BIG-IP highlight critical vulnerabilities at the edge proxy layer. Operations teams should quickly apply these updates to prevent potential unauthorized remote access or ingress disruption.
-  [Read more](https://news.google.com/rss/articles/CBMiYkFVX3lxTE5JMkc1bEZSMVNyVkp2djRjazNOSVU2NnQ1V0Q2QlNKTXVnWS1aWW9qN1lWWm9JV2ctMEJvSzFhbmpZZFhWbW5DT2pqU0dQN09IYlB6ekplTGk1MmpWdy1QaHFn?oc=5)
-
 - **Trojanized ai-sdk-ollama Delivers Miasma, a Self-Replicating npm Worm via binding.gyp - Endor Labs**
-  Malicious npm packages like the trojanized Ollama SDK exploit binding.gyp build scripts to drop payloads during dependency installation. This supply-chain vector underlines the need to restrict build script execution and strictly audit third-party packages in automated pipelines.
+  A trojanized npm package named ai-sdk-ollama was detected executing self-replicating malware during installation using native C++ build hooks in binding.gyp. The attack specifically targets developers building local AI workflows who import third-party SDKs into their local build systems. This reinforces the necessity of strict dependency locking, automated supply chain analysis, and running package installations within isolated build sandboxes.
   [Read more](https://news.google.com/rss/articles/CBMihAFBVV95cUxPSzdXaXZlNE1UR21NeDdsVlVXZm5BWDBqMGI0VzVvdHpkLV9IeHNjV2o3OXh2eWM3dXc2d0wxSmxYbEpsNWdXYU81T1BTWDdicVptRzJMRnN3cGxtaldELXpqbmVuanpIUExwQXlBSVJLRkpqOTRIOXRLSW5wZ3J3TzM0dkY?oc=5)
 
-- **NanoClaw integrates with Docker to bring trust to AI agents - techzine.eu**
-  Running autonomous AI agents directly on host environments poses serious operational risks if their actions are unconstrained. Wrapping agent execution in Docker container boundaries helps sandbox file and network access, introducing standard infrastructure guardrails to AI tasks.
-  [Read more](https://news.google.com/rss/articles/CBMipgFBVV95cUxOaEg1RGJrZWtiTVlSbk5JZnlRd2xVV2tEVjBHODI1cW1SQUFDdFVzSE5VQUkxcE55OGFqTEZNM3VXUFRHRFg3VzVXWUk2MWlaRjhDaERUamVYclhyTVdPSVJKeF9Cb2FFcG95dnlyeUhNSU9OV1RNZ19CbGpkUVdpMGxLOTZfT0FudXplbU9PVGJLUUgwbjNjYXhMTl93YTlqc21DRTd3?oc=5)
+- **F5 releases out-of-band security updates for NGINX and BIG-IP products - Field Effect**
+  F5 and the NGINX project have issued out-of-band updates addressing severe vulnerabilities in BIG-IP appliances and NGINX core components. The defects allow remote attackers to cause system instability or potentially execute code under specific HTTP header processing states. Infrastructure teams deploying NGINX as an ingress controller or edge proxy should prioritize applying these releases or implementing compensating WAF rules immediately.
+  [Read more](https://news.google.com/rss/articles/CBMiYkFVX3lxTE5JMkc1bEZSMVNyVkp2djRjazNOSVU2NnQ1V0Q2QlNKTXVnWS1aWW9qN1lWWm9JV2ctMEJvSzFhbmpZZFhWbW5DT2pqU0dQN09IYlB6ekplTGk1MmpWdy1QaHFn?oc=5)
 
 - **Enhancing Developer Productivity: Finch’s Support for Development Containers and the Finch Daemon - Amazon Web Services (AWS)**
-  AWS Finch adding daemon capabilities and Dev Containers support helps engineers adopt open container runtimes without losing familiar local workflow tools. Standardizing development environments on open OCI tools reduces reliance on proprietary desktop options while ensuring parity with production targets.
+  AWS has updated Finch, its open-source container CLI, to support Dev Containers and a background daemon architecture. This allows developers on macOS and Linux to leverage standardized containerized development environments natively without reliance on proprietary VM frameworks. For engineering organizations evaluating alternatives to Docker Desktop, Finch now provides a competitive, fully open-source runtime layer.
   [Read more](https://news.google.com/rss/articles/CBMi0gFBVV95cUxNUEJ4S280bmpMT3M1SElkU2w3MVZpU25zTE1TNXRYNHVBVHY3UUtKYWJyTjF4cGhYUzFqSWQxcGFscEZsOXRVaEVRak5wYWpCR0NBNHNaaWZ1aGNrVVhDX0JpVE5hQ1NtWTRuN0s3dmp2ZXF2MkdjZXFPeFVEbFNPU2pnRnRsdWRDUzVJMGdsMEExMGc2blZsUm4xd3o4S0wzb0ZRXzI2WFpsWVhqb25MRGVHWkE2UnZfdUdPRVh2V21VeTM2Qmthd2UwLVJJLVdCZFE?oc=5)
 
 - **GitLab thrice sued for 'misleading' investors with AI hype - The Register**
-  Investor lawsuits against GitLab over AI feature performance reflect broader market skepticism around early generative DevOps tooling returns. Platform teams are shifting focus from experimental AI integrations toward measuring clear productivity gains and compliance controls.
+  GitLab is facing shareholder lawsuits alleging that executive communications exaggerated the adoption and immediate financial impact of its AI features. While platform vendors actively market generative AI features to justify price increases, enterprise buyers remain cautious about verifiable operational gains. Engineering leaders evaluating DevSecOps platforms should evaluate AI functionality based on concrete developer output rather than marketing promises.
   [Read more](https://news.google.com/rss/articles/CBMisgFBVV95cUxONTBSSzB1MV9FUU9wX1ZBT2xFdVZCN0kwUWVGbVlSUmdaN1JMTUJpcjU5QmpEZW93V21CVkN0NHd2S3ZBbTZCNEpzYndyT0ZiQi1zMWRuUllNbFVvVVFXY05Da3I5R2pyRS0xUEFINS1obzkwei1SSnB4ZDZrbU9pc0VMeGNpNVk2d09GQm9lTUluRFd0SjRJVnVwQmt6TWhlY0w5UGVCRmV2Q2JMdlkwN1J3?oc=5)
+
+- **macOS 26: Native container support delights developers – and not just them - heise online**
+  Apple has integrated native container support directly into macOS, providing kernel-level runtime primitives for containerized workloads. This architecture bypasses much of the virtual machine orchestration penalty typically required on Apple Silicon hardware. DevOps engineers running macOS workstations can expect improved container startup times, lower CPU overhead, and better RAM efficiency during local development.
+  [Read more](https://news.google.com/rss/articles/CBMitAFBVV95cUxQZlM4SDNiNGVTM05pWE1QSFE0Q1BrZENVMlNJMVdPVjNxVkstZHBBQ19GZHN5VzByMUdfOGJOeG5OWUN4dW95dWo2ZTBFaGpUbjZ4dHpLQ3J5OXVZb3lON1ZSMUF4cHFTZWFlMVgwNnl2TGtIdXE0eHA4WWNOdUViTmZxR08zejRVYUw4M3BBMXc5UlhMdk82MHRrSFVQTnhuUE1HcEdyUHJVWHlVaWFFXzh4anc?oc=5)
 
 ## Archive
 
