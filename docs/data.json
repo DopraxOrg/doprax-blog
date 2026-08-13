@@ -1064,6 +1064,38 @@
           "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxONTBSSzB1MV9FUU9wX1ZBT2xFdVZCN0kwUWVGbVlSUmdaN1JMTUJpcjU5QmpEZW93V21CVkN0NHd2S3ZBbTZCNEpzYndyT0ZiQi1zMWRuUllNbFVvVVFXY05Da3I5R2pyRS0xUEFINS1obzkwei1SSnB4ZDZrbU9pc0VMeGNpNVk2d09GQm9lTUluRFd0SjRJVnVwQmt6TWhlY0w5UGVCRmV2Q2JMdlkwN1J3?oc=5",
           "commentary": "Legal action against GitLab over AI productivity claims highlights growing operational skepticism around automated software delivery metrics. Engineering organizations evaluating AI-driven features in enterprise DevOps platforms must base adoption on measurable pipeline throughput rather than vendor projections. Verifiable cycle-time reduction and code quality metrics should dictate platform investment decisions."
         }
+      ],
+      "2026-08-13": [
+        {
+          "title": "Alarming runC Flaws Enable Hackers To Exploit Docker Containers For Root Access - HotHardware",
+          "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOaTE0X1FvWGtLRDhBZXROVWUzcFdZN1hUSEZFNm0zSV9MajZUYm5vM0lDNVdKd0xfdHZpbWhFYnUtTUI5ckpsRHJMdnVjZl9Nb2NYd0dTeFY2bmZyZkNwbDU0S2Z3S3NxM1FpS1FrVVg1cnBFQlZrRzgzalZTWXliZjFfaHJqMTZJaXlCRA?oc=5",
+          "commentary": "Flaws in runC directly compromise container isolation, allowing attackers with container access to gain root privileges on the host node. This reinforces why running containers as non-root and maintaining minimal host privileges remain mandatory defenses rather than optional best practices."
+        },
+        {
+          "title": "n8n Sandbox Escape Lets Workflow Editors Run OS Commands as the n8n Process - The Hacker News",
+          "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE80cFJDS2J5QjZkQ2lDTm56U3pxZE5vWm56NDRzZGxxelJFanhibDR6WVhub1RIdTR0RUl3cXo3bkdvQ19GekhQNmI2cUQtSUhSWjVsbFJBMEJidXRoZEI5RUZwSVdmaHBXZm00dGRUa2lPY0oySWtoUXhvbw?oc=5",
+          "commentary": "A sandbox escape in n8n allows users with workflow editing permissions to execute arbitrary system commands under the main application context. In self-hosted setups where n8n often holds broad credentials for internal APIs, this effectively turns workflow editor privileges into full server compromise."
+        },
+        {
+          "title": "Trojanized ai-sdk-ollama Delivers Miasma, a Self-Replicating npm Worm via binding.gyp - Endor Labs",
+          "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPSzdXaXZlNE1UR21NeDdsVlVXZm5BWDBqMGI0VzVvdHpkLV9IeHNjV2o3OXh2eWM3dXc2d0wxSmxYbEpsNWdXYU81T1BTWDdicVptRzJMRnN3cGxtaldELXpqbmVuanpIUExwQXlBSVJLRkpqOTRIOXRLSW5wZ3J3TzM0dkY?oc=5",
+          "commentary": "The malicious ai-sdk-ollama package weaponized native build hooks in binding.gyp to execute worm payload code during installation. Supply chain risks in the emerging local AI ecosystem are escalating quickly as developers rapidly adopt unvetted third-party wrapper packages."
+        },
+        {
+          "title": "Nginx 1.29.8 and FreeNginx Released With Critical Security Updates - cybersecuritynews.com",
+          "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE0tWVRPaG9lTlJMZFVyVGFNb2VKZ1g5WlAyQzlzMUVrWHZRSkRoSklKTzNSV184eWg5ZUNrS2wzX1VTVklacjJDZjZGSHY4NElReHhpcHI3WnI0VWNyUUZJb0ktY1V6c1NIS082SXVDMF9vUHFB0gF6QVVfeXFMTlpQZnZsRWlzLWJvSUFqUkY1a0RxMHlodFJXRzNGY2lZWnItMjFmU0hiNXN2MXplaTAtdlNSb0dZVWI2MHp6U1M2ZmVNeXptWlpsQTB5N09zaU12OGVnNTRFZ0diZ2w2cWl1UTU2YzlHY1BPTmxoLXpoc0E?oc=5",
+          "commentary": "Out-of-band security releases for Nginx address critical vulnerabilities that could lead to denial of service or remote code execution. Reverse proxies and edge web servers require prompt patching cycles since they represent the exposed entry point for entire network architectures."
+        },
+        {
+          "title": "Google-Backed Software Developer GitLab Eyes Sale, Reuters Says - Bloomberg.com",
+          "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPTUdBNmJQbXNrSENsUzNrRmFUZDNkTG1ZaUhsS2NEZTYtck42UkZpNkdTRTBSRzJTc2drdnlHWlpMTjhzcmZ3YlljbGVqWnJHenBVb0NHbTk5OE1tc3Q4cVpMamxWUlhJdGdPaElPckpHbGJHbzA5MzRNX0xXTkl5MXVPRzRrLWZkVjBueHp4TEJYOTRYU0lrSzNweE9lRDl5SnViYmpLRnJDakJrT01ha1g5MA?oc=5",
+          "commentary": "Reports that GitLab is exploring a sale highlight the growing consolidation pressures on standalone DevOps and platform engineering vendors. For enterprise infrastructure teams, potential shifts in ownership or corporate direction raise long-term concerns regarding licensing, pricing, and platform lock-in."
+        },
+        {
+          "title": "Enhancing Developer Productivity: Finch’s Support for Development Containers and the Finch Daemon - aws.amazon.com",
+          "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNUEJ4S280bmpMT3M1SElkU2w3MVZpU25zTE1TNXRYNHVBVHY3UUtKYWJyTjF4cGhYUzFqSWQxcGFscEZsOXRVaEVRak5wYWpCR0NBNHNaaWZ1aGNrVVhDX0JpVE5hQ1NtWTRuN0s3dmp2ZXF2MkdjZXFPeFVEbFNPU2pnRnRsdWRDUzVJMGdsMEExMGc2blZsUm4xd3o4S0wzb0ZRXzI2WFpsWVhqb25MRGVHWkE2UnZfdUdPRVh2V21VeTM2Qmthd2UwLVJJLVdCZFE?oc=5",
+          "commentary": "Amazon's open-source Finch tool now supports development containers and runs a background daemon to streamline container operations on macOS. Providing a native open-source alternative to Docker Desktop helps organizations standardize developer environments while bypassing commercial licensing hurdles."
+        }
       ]
     }
   }
